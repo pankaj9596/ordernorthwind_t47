@@ -1,0 +1,65 @@
+<mvc:View controllerName="com.sap.ordernorthwind.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true" 	
+    xmlns:uxap="sap.uxap"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Page title="Order Detail Page" showNavButton="true" navButtonTooltip="Go Back" navButtonPress="onPressBack">
+        <content>
+            <uxap:ObjectPageLayout showHeaderContent="false" upperCaseAnchorBar="false">               
+                <uxap:sections>
+				    <uxap:ObjectPageSection titleUppercase="false" title="Order Information">
+				        <uxap:subSections>
+					        <uxap:ObjectPageSubSection titleUppercase="false">
+						        <uxap:blocks>
+                                    <core:Fragment fragmentName="com.sap.ordernorthwind.view.subView.OrderInformation" type="XML"/>
+						        </uxap:blocks>
+					        </uxap:ObjectPageSubSection>
+				        </uxap:subSections>
+			        </uxap:ObjectPageSection>
+
+                    <uxap:ObjectPageSection titleUppercase="false" title="Order Details">
+				        <uxap:subSections>
+					        <uxap:ObjectPageSubSection titleUppercase="false">
+						        <uxap:blocks>
+                                     <core:Fragment fragmentName="com.sap.ordernorthwind.view.subView.OrderDetails" type="XML"/>
+						        </uxap:blocks>
+					        </uxap:ObjectPageSubSection>
+				        </uxap:subSections>
+			        </uxap:ObjectPageSection>
+
+                    <uxap:ObjectPageSection titleUppercase="false" title="Customer Information">
+				        <uxap:subSections>
+					        <uxap:ObjectPageSubSection titleUppercase="false">
+						        <uxap:blocks>
+                                    <Label text="Customer Information"></Label>
+						        </uxap:blocks>
+					        </uxap:ObjectPageSubSection>
+				        </uxap:subSections>
+			        </uxap:ObjectPageSection>
+
+                    <uxap:ObjectPageSection titleUppercase="false" title="Employee Information">
+				        <uxap:subSections>
+					        <uxap:ObjectPageSubSection titleUppercase="false">
+						        <uxap:blocks>
+                                    <Label text="Employee Information"></Label>
+						        </uxap:blocks>
+					        </uxap:ObjectPageSubSection>
+				        </uxap:subSections>
+			        </uxap:ObjectPageSection>
+
+                    <uxap:ObjectPageSection titleUppercase="false" title="Shipper Information">
+				        <uxap:subSections>
+					        <uxap:ObjectPageSubSection titleUppercase="false">
+						        <uxap:blocks>
+                                    <Label text="Shipper Information"></Label>
+						        </uxap:blocks>
+					        </uxap:ObjectPageSubSection>
+				        </uxap:subSections>
+			        </uxap:ObjectPageSection>
+
+                    
+	            </uxap:sections>
+            </uxap:ObjectPageLayout>
+        </content>
+    </Page>
+</mvc:View>

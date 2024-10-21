@@ -1,0 +1,22 @@
+<mvc:View controllerName="com.sap.ordernorthwind.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            	<List
+                    items="{/Orders}"
+                    headerText="Orders"
+                    growing="true"
+                    growingThreshold="20"
+                    growingScrollToLoad="false">
+                        <StandardListItem
+                            title="{OrderID}"
+                            description="{CustomerID}"
+                            iconDensityAware="false"
+                            iconInset="false"
+                            press="onPressOrderItem"
+                            type="Active" />
+	            </List>
+        </content>
+    </Page>
+</mvc:View>

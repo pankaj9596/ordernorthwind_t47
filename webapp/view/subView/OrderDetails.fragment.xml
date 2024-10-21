@@ -1,0 +1,61 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	
+	xmlns:core="sap.ui.core">
+	<VBox class="sapUiSmallMargin">
+		<Table alternateRowColors="true" items="{path : 'DetailModel>/OrderDetail/Order_Details/results',
+            sorter: {path : 'UnitPrice',descending: true}}">
+
+    <headerToolbar>
+        <Toolbar>
+            <content>
+                <Title text="Orders"/>
+                <ToolbarSpacer/>
+                <Button type="Default" text="Download" icon="sap-icon://excel-attachment" press="onExport"></Button>
+            </content>
+        </Toolbar>
+    </headerToolbar>
+
+    <columns>
+        <Column>
+            <Label design="Bold" text="{i18n>orderId}"></Label>
+        </Column>
+        <Column>
+            <Label design="Bold" text="ProductID"></Label>
+        </Column>
+        <Column>
+            <Label design="Bold" text="UnitPrice"></Label>
+        </Column>
+        <Column>
+            <Label text="Quantity"></Label>
+        </Column>
+        <Column>
+            <Label text="Discount"></Label>
+        </Column>
+        <Column>
+            <Label text="Total Price"></Label>
+        </Column>
+    </columns>
+
+    <items>
+        <ColumnListItem>
+            <cells>
+                <Text text="{DetailModel>OrderID}"></Text>
+                <Text text="{DetailModel>ProductID}"></Text>
+                <Text text="{DetailModel>UnitPrice}"></Text>
+                <Text text="{DetailModel>Quantity}"></Text>
+                <Text text="{DetailModel>Discount}"></Text>
+                <Text text="{
+                        parts : [
+                            {path : 'DetailModel>UnitPrice'},
+                            {path : 'DetailModel>Quantity'}],
+                        formatter : '.formatter.totalPrice'
+                }"></Text>
+               
+            </cells>
+        </ColumnListItem>
+    </items>
+
+</Table>
+	</VBox>
+</core:FragmentDefinition>
